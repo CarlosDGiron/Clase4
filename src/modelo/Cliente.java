@@ -25,6 +25,7 @@ public class Cliente extends Persona {
     public Cliente(String nit, String nombre, String apellido, String direccion, String telefono, String fecha_nacimiento) {
         super(nombre, apellido, direccion, telefono, fecha_nacimiento);
         this.nit = nit;
+        c=new Conexion();
     }
 
     public String getNit() {
@@ -53,6 +54,7 @@ public class Cliente extends Persona {
     @Override
     public DefaultTableModel leer(){
         try{
+            c.abrir_conexion();
             ResultSet res;
             DefaultTableModel model=new DefaultTableModel();
             String encabezado []={"ID","NIT","Nombre","Apellido","Dirección","Teléfono","Fecha de Nacimiento"};
@@ -69,10 +71,13 @@ public class Cliente extends Persona {
                 datos[6]=res.getString("fecha_nacimiento");
                 //guardar en tabla de formulario la row y seguir con la consulta
                 model.addRow(datos);
+             
             }
+            c.cerrar_conexion();
             return model;
         }catch(SQLException ex){
             System.out.println("Eror:"+ex.getMessage());
+            c.cerrar_conexion();
             return null;
         }   
     }
@@ -101,9 +106,11 @@ public class Cliente extends Persona {
             int ejecutar = 0;
             ejecutar=parametro.executeUpdate();
             JOptionPane.showMessageDialog(null, "Se han insertado registros en la tabla clientes. Registros ingresados: "+Integer.toString(ejecutar)+".","Modificación en tabla Clientes",JOptionPane.INFORMATION_MESSAGE);
+            c.cerrar_conexion();
         } catch (SQLException ex) {
             Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            c.cerrar_conexion();
         }
-        c.cerrar_conexion();
+        
     }
 }

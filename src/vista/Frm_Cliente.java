@@ -15,6 +15,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
      */
     public Frm_Cliente() {
         initComponents();
+        cliente=new Cliente();
         jTable1.setModel(cliente.leer());
     }
 
