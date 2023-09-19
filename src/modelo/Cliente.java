@@ -40,7 +40,7 @@ public class Cliente extends Persona {
     public void setNit(String nit) {
         this.nit = nit;
     }
-
+    
     @Override
     public String [] crear(){
         //en desuso, usada en tarea anterior
@@ -107,7 +107,7 @@ public class Cliente extends Persona {
             JOptionPane.showMessageDialog(null, "Se han actualizado registros en la tabla clientes. Registros actualizados: "+Integer.toString(ejecutar)+".","Modificación en tabla Clientes",JOptionPane.INFORMATION_MESSAGE);
             c.cerrar_conexion();
         } catch (SQLException ex) {
-            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);            
             c.cerrar_conexion();
         }
     }
@@ -116,7 +116,7 @@ public class Cliente extends Persona {
         c.abrir_conexion();
         try {
             PreparedStatement parametro;
-            String query="DELETE FROM clientes WHERE id=?;";
+            String query="DELETE FROM clientes WHERE id_cliente=?;";
             parametro=(PreparedStatement) c.conexionDB.prepareStatement(query);
             parametro.setString(1,getId());
             int ejecutar = 0;
@@ -124,7 +124,7 @@ public class Cliente extends Persona {
             JOptionPane.showMessageDialog(null, "Se han eliminado registros en la tabla clientes. Registros eliminados: "+Integer.toString(ejecutar)+".","Modificación en tabla Clientes",JOptionPane.INFORMATION_MESSAGE);
             c.cerrar_conexion();
         } catch (SQLException ex) {
-            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);            
             c.cerrar_conexion();
         }
     }
@@ -147,6 +147,7 @@ public class Cliente extends Persona {
             c.cerrar_conexion();
         } catch (SQLException ex) {
             Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            
             c.cerrar_conexion();
         }        
     }

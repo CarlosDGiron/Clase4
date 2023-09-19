@@ -30,7 +30,6 @@ public class Conexion {
         try{            
             Class.forName(jdbc);
             conexionDB=DriverManager.getConnection(urlConexion, usuario, pass);
-            System.out.println("Conexion exitosa.");
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println("Eror:"+ex.getMessage());
         }
@@ -45,7 +44,6 @@ public class Conexion {
     public void cerrar_conexion(){
         try{
             conexionDB.close();
-            System.out.println("Conexion finalizada.");
         }catch(SQLException ex){
             System.out.println("Eror:"+ex.getMessage());
         }

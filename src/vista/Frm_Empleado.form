@@ -5,6 +5,9 @@
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="title" type="java.lang.String" value="Formulario de Clientes"/>
   </Properties>
+  <AccessibilityProperties>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Formulario de Empleados"/>
+  </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
@@ -28,49 +31,54 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lbl_titulo" max="32767" attributes="0"/>
-                  <Component id="jScrollPane1" pref="878" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Component id="jScrollPane1" pref="875" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="lbl_nombre" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lbl_codigo_empleado" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lbl_apellidos" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="lbl_puesto" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lbl_telefono" max="32767" attributes="0"/>
-                                  <Component id="lbl_direccion" max="32767" attributes="0"/>
-                                  <Component id="lbl_nacimiento" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="txt_direccion" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="txt_telefono" min="-2" pref="200" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="txt_nacimiento" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="lbl_nombre" max="32767" attributes="0"/>
-                                  <Component id="lbl_codigo" max="32767" attributes="0"/>
-                                  <Component id="lbl_apellidos" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txt_nombre" max="32767" attributes="0"/>
-                                  <Component id="txt_apellido" max="32767" attributes="0"/>
-                                  <Component id="txt_codigo" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="txt_nombre" pref="335" max="32767" attributes="0"/>
+                          <Component id="txt_apellido" pref="335" max="32767" attributes="0"/>
+                          <Component id="txt_codigo_empleado" alignment="0" pref="335" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btn_crear" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="cmb_puesto" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btn_actualizar" min="-2" pref="169" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="lbl_puesto" min="-2" pref="114" max="-2" attributes="0"/>
+                              <Component id="lbl_id" min="-2" pref="21" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_puesto" max="32767" attributes="0"/>
+                              <Component id="lbl_id_dato" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="558" max="32767" attributes="0"/>
+                      <EmptySpace min="274" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btn_crear" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btn_actualizar" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btn_eliminar" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lbl_telefono" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lbl_direccion" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lbl_nacimiento" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txt_telefono" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_nacimiento" alignment="0" min="-2" pref="335" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txt_direccion" min="-2" pref="335" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -82,48 +90,60 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lbl_titulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_codigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_codigo" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="lbl_direccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_direccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="lbl_puesto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_id" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmb_puesto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="lbl_id_dato" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btn_actualizar" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btn_crear" alignment="3" max="32767" attributes="0"/>
+                              <Component id="btn_eliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_codigo_empleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_codigo_empleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_direccion" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_direccion" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl_puesto" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_puesto" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btn_actualizar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn_crear" alignment="3" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="198" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="270" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -138,9 +158,9 @@
         <Property name="text" type="java.lang.String" value="Formulario de Empleados"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_codigo">
+    <Component class="javax.swing.JLabel" name="lbl_codigo_empleado">
       <Properties>
-        <Property name="text" type="java.lang.String" value="C&#xf3;digo de empleado"/>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo Empleado"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbl_nombre">
@@ -153,22 +173,34 @@
         <Property name="text" type="java.lang.String" value="Apellidos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_codigo">
+    <Component class="javax.swing.JTextField" name="txt_codigo_empleado">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txt_nombre"/>
+        </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_codigoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_codigo_empleadoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_nombre">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txt_apellido"/>
+        </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_apellido">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txt_direccion"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_apellidoActionPerformed"/>
@@ -177,6 +209,9 @@
     <Component class="javax.swing.JTextField" name="txt_nacimiento">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="btn_crear"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_nacimientoActionPerformed"/>
@@ -185,11 +220,17 @@
     <Component class="javax.swing.JTextField" name="txt_telefono">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txt_nacimiento"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_direccion">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txt_telefono"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_direccionActionPerformed"/>
@@ -213,6 +254,9 @@
     <Component class="javax.swing.JButton" name="btn_crear">
       <Properties>
         <Property name="text" type="java.lang.String" value="Crear"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="btn_actualizar"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_crearActionPerformed"/>
@@ -221,6 +265,9 @@
     <Component class="javax.swing.JButton" name="btn_actualizar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Actualizar"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="btn_eliminar"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_actualizarActionPerformed"/>
@@ -230,7 +277,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
+        <Component class="javax.swing.JTable" name="tabla_cliente">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="6" rowCount="0">
@@ -280,21 +327,57 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabla_clienteMouseClicked"/>
+            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabla_clienteMousePressed"/>
+            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabla_clienteMouseReleased"/>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tabla_clienteKeyPressed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tabla_clienteKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tabla_clienteKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="lbl_id">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ID"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_id_dato">
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_eliminar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eliminar"/>
+        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txt_codigo_empleado"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_eliminarActionPerformed"/>
+      </Events>
+    </Component>
     <Component class="javax.swing.JLabel" name="lbl_puesto">
       <Properties>
         <Property name="text" type="java.lang.String" value="Puesto"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_puesto">
+    <Component class="javax.swing.JComboBox" name="cmb_puesto">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_puestoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmb_puestoActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

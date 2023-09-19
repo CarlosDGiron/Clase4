@@ -296,6 +296,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
         cliente.agregar();
         //limpiar campos
         this.limpiar_campos();
+        tabla_cliente.setModel(cliente.leer());
     }//GEN-LAST:event_btn_crearActionPerformed
 
     private void btn_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_actualizarActionPerformed
@@ -305,7 +306,8 @@ public class Frm_Cliente extends javax.swing.JFrame {
         }else{
          cliente = new Cliente(lbl_id_dato.getText(),txt_nit.getText(),txt_nombre.getText(),txt_apellido.getText(),txt_direccion.getText(),txt_telefono.getText(),txt_nacimiento.getText());
          cliente.actualizar();
-         this.limpiar_campos();           
+         this.limpiar_campos();
+        tabla_cliente.setModel(cliente.leer());
         }        
     }//GEN-LAST:event_btn_actualizarActionPerformed
 
@@ -316,7 +318,8 @@ public class Frm_Cliente extends javax.swing.JFrame {
         }else{
          cliente = new Cliente(lbl_id_dato.getText(),txt_nit.getText(),txt_nombre.getText(),txt_apellido.getText(),txt_direccion.getText(),txt_telefono.getText(),txt_nacimiento.getText());
          cliente.borrar();
-         this.limpiar_campos();           
+         this.limpiar_campos();      
+        tabla_cliente.setModel(cliente.leer());
         }
     }//GEN-LAST:event_btn_eliminarActionPerformed
 
