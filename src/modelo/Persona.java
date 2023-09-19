@@ -11,17 +11,33 @@ import javax.swing.table.DefaultTableModel;
  * @author cana0
  */
 abstract class Persona {
-    private String nombre, apellido, direccion,telefono,fecha_nacimiento;
+    private String id, nombre, apellido, direccion,telefono,fecha_nacimiento;
 
     public Persona() {
     }
 
+    public Persona(String id, String nombre, String apellido, String direccion, String telefono, String fecha_nacimiento) {
+        this.nombre = nombre;
+        this.id = id;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
     public Persona(String nombre, String apellido, String direccion, String telefono, String fecha_nacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
         this.fecha_nacimiento = fecha_nacimiento;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {

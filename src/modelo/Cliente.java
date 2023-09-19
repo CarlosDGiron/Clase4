@@ -22,12 +22,17 @@ public class Cliente extends Persona {
         c=new Conexion();
     }
 
+    public Cliente(String id, String nit, String nombre, String apellido, String direccion, String telefono, String fecha_nacimiento) {
+        super(id,nombre, apellido, direccion, telefono, fecha_nacimiento);
+        this.nit = nit;
+        c=new Conexion();
+    }
     public Cliente(String nit, String nombre, String apellido, String direccion, String telefono, String fecha_nacimiento) {
         super(nombre, apellido, direccion, telefono, fecha_nacimiento);
         this.nit = nit;
         c=new Conexion();
     }
-
+    
     public String getNit() {
         return nit;
     }
@@ -38,6 +43,7 @@ public class Cliente extends Persona {
 
     @Override
     public String [] crear(){
+        //en desuso, usada en tarea anterior
         try{
             String datos [] = new String[6];
             datos[0]=this.getNit();
@@ -84,11 +90,43 @@ public class Cliente extends Persona {
     
     @Override
     public void actualizar(){
-        
+        c.abrir_conexion();
+        try {
+            PreparedStatement parametro;
+            String query="UPDATE clientes SET nit=?, nombres=?, apellidos=?, direccion=?, telefono=?, fecha_nacimiento=? where id_cliente=?;";
+            parametro=(PreparedStatement) c.conexionDB.prepareStatement(query);
+            parametro.setString(1,getNit());
+            parametro.setString(2,getNombre());
+            parametro.setString(3,getApellido());
+            parametro.setString(4,getDireccion());
+            parametro.setString(5,getTelefono());
+            parametro.setString(6,getFecha_nacimiento());
+            parametro.setString(7,getId());
+            int ejecutar = 0;
+            ejecutar=parametro.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Se han actualizado registros en la tabla clientes. Registros actualizados: "+Integer.toString(ejecutar)+".","Modificación en tabla Clientes",JOptionPane.INFORMATION_MESSAGE);
+            c.cerrar_conexion();
+        } catch (SQLException ex) {
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            c.cerrar_conexion();
+        }
     }
     @Override
     public void borrar(){
-        
+        c.abrir_conexion();
+        try {
+            PreparedStatement parametro;
+            String query="DELETE FROM clientes WHERE id=?;";
+            parametro=(PreparedStatement) c.conexionDB.prepareStatement(query);
+            parametro.setString(1,getId());
+            int ejecutar = 0;
+            ejecutar=parametro.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Se han eliminado registros en la tabla clientes. Registros eliminados: "+Integer.toString(ejecutar)+".","Modificación en tabla Clientes",JOptionPane.INFORMATION_MESSAGE);
+            c.cerrar_conexion();
+        } catch (SQLException ex) {
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+            c.cerrar_conexion();
+        }
     }
     @Override
     public void agregar(){
@@ -110,7 +148,6 @@ public class Cliente extends Persona {
         } catch (SQLException ex) {
             Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
             c.cerrar_conexion();
-        }
-        
+        }        
     }
 }

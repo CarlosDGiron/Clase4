@@ -16,6 +16,11 @@ public class Empleado extends Persona {
     public Empleado() {
     }
 
+    public Empleado(String id, String codigo_empleado, String puesto, String nombre, String apellidos, String direccion, String telefono, String fecha_nacimiento) {
+        super(id, nombre, apellidos, direccion, telefono, fecha_nacimiento);
+        this.codigo_empleado = codigo_empleado;
+        this.puesto = puesto;
+    }
     public Empleado(String codigo_empleado, String puesto, String nombre, String apellidos, String direccion, String telefono, String fecha_nacimiento) {
         super(nombre, apellidos, direccion, telefono, fecha_nacimiento);
         this.codigo_empleado = codigo_empleado;
